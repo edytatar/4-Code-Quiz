@@ -116,7 +116,7 @@ function getNewQuestion() {
     // If there are no more questions left, store the score, and go the the end page
     if (availableQuestions.length === 0 || questionCounter > totalQuestions) {
         localStorage.setItem("mostRecentScore", score);
-        return window.location.assign("/end.html");
+        return window.location.assign("end.html");
     }
     // Increment question counter by 1
     questionCounter++;
@@ -154,14 +154,12 @@ function setTime() {
         secondsLeft--;
         timeEl.textContent = secondsLeft + " left in the quiz.";
 
-        // If timer is at 0 seconds left
         if (secondsLeft === 0) {
             // Stop execution
             clearInterval(timerInterval);
             // Go the end page
-            return window.location.assign("/end.html");
+            return window.location.assign("end.html");
         }
-
     }, 1000);
 }
 
@@ -204,5 +202,5 @@ var incrementScore = num => {
     scoreText.innerText = score;
 }
 
-
+// Invokes the startGame function
 startGame();
