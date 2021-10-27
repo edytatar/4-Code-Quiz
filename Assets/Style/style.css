@@ -67,7 +67,7 @@ h3 {
     text-align: center;
 }
 
-.btn:hover {
+.btn:hover, .btn-not-save:hover {
     transition: transform 300ms;
     transform: scale(1.05);
 }
