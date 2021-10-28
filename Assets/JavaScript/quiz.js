@@ -116,7 +116,7 @@ function getNewQuestion() {
     // If there are no more questions left, store the score, and go the the end page
     if (availableQuestions.length === 0 || questionCounter > totalQuestions) {
         localStorage.setItem("mostRecentScore", score);
-        return window.location.assign("end.html");
+        return window.location.href="end.html";
     }
     // Increment question counter by 1
     questionCounter++;
@@ -158,7 +158,7 @@ function setTime() {
             // Stop execution
             clearInterval(timerInterval);
             // Go the end page
-            return window.location.assign("end.html");
+            return window.location.href="end.html";
         }
     }, 1000);
 }
