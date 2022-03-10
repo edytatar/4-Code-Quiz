@@ -32,5 +32,5 @@ saveHighScore = e => {
     highScores.splice(5);
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
-    return window.location.href = "../index.html"
+    return window.location.href = "https://edytatar.github.io/4-Code-Quiz/"
 }
